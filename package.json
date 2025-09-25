@@ -2,30 +2,37 @@
   "name": "rapier-physics",
   "version": "1.0.0",
   "description": "",
-  "keywords": ["rapier"],
+  "keywords": [
+    "rapier"
+  ],
   "main": "src/index.tsx",
   "dependencies": {
+    "@react-three/drei": "9.88.2",
+    "@react-three/fiber": "8.14.5",
+    "@react-three/postprocessing": "3.0.4",
+    "@react-three/rapier": "1.1.1",
+    "leva": "0.9.34",
+    "postprocessing": "^6.37.8",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "@react-three/fiber": "8.14.5",
-    "@react-three/drei": "9.88.2",
-    "@react-three/rapier": "1.1.1",
-    "@react-three/postprocessing": "3.0.4",
-    "three": "0.157.0",
-    "leva": "0.9.34",
-    "postprocessing": "^7.0.0"
+    "three": "0.157.0"
   },
   "devDependencies": {
-    "typescript": "4.4.2",
     "@types/react": "18.2.28",
-    "@types/react-dom": "18.2.7"
-  }
-  
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "@types/react-dom": "18.2.7",
+    "@vitejs/plugin-react": "^4.1.0",
+    "typescript": "5.2.2",
+    "vite": "^4.5.14"
   },
-  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

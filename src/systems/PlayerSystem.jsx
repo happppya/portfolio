@@ -2,7 +2,7 @@ import { useRef } from 'react'
 import { RigidBody } from '@react-three/rapier'
 import { useFrame } from '@react-three/fiber'
 import * as THREE from 'three'
-import { usePersonControls } from './Controls.js'
+import { usePersonControls } from './Controls.jsx'
 
 export function Player() {
   const ref = useRef()
@@ -40,12 +40,12 @@ export function Player() {
     }
 
     // ground check
-    if (pos.y <= 50.01) canJump.current = true
+    if (pos.y <= 5) canJump.current = true
   })
 
   return (
-    <RigidBody ref={ref} type="dynamic" colliders="cuboid" mass={1} restitution={0} friction={0}>
-      <mesh castShadow position={[0, 50, 0]}>
+    <RigidBody ref={ref} type="dynamic" colliders="cuboid" mass={1} restitution={0} friction={0} position={[0, 10, 0]}>
+      <mesh castShadow>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color="blue" />
       </mesh>

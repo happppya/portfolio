@@ -8,9 +8,9 @@ import { useControls } from 'leva'
 import { EffectComposer, DepthOfField, Bloom, Noise } from '@react-three/postprocessing'
 import { BlendFunction } from 'postprocessing'
 
-import { PlayerCamera } from './systems/PlayerCamera.js'
-import { Player } from './systems/PlayerSystem.js'
-import * as Shape from './components/ShapeComponent.js'
+import { PlayerCamera } from './systems/PlayerCamera.jsx'
+import { Player } from './systems/PlayerSystem.jsx'
+import * as Shape from './components/ShapeComponent.jsx'
 
 const Workspace = () => (
   <group position={[2, 3, 0]}>
@@ -26,7 +26,7 @@ export default function App() {
   const playerRef = useRef()
 
   return (
-    <Canvas shadows camera={{ position: [-50, -25, 150], fov: 50 }}>
+    <Canvas shadows camera={{ position: [0, 10, 10], fov: 50 }}>
       <fogExp2 attach="fog" args={['#b3bdb4', 0.01]} />
 
       <Suspense fallback={null}>
