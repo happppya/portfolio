@@ -2,6 +2,41 @@
   box-sizing: border-box;
 }
 
+:root {
+  --fluid-h1: clamp(2.5rem, 6vw, 4rem);
+  --fluid-h2: clamp(2rem, 5vw, 3rem);
+  --fluid-h3: clamp(1.5rem, 4vw, 2.25rem);
+  --fluid-body: clamp(1rem, 2vw, 1.25rem);
+}
+
+.overlay {
+  position: absolute; /* relative to the parent div */
+  width: 100%;
+  height: 100%;
+  top: 50%; /* center vertically */
+  left: 50%; /* center horizontally */
+  transform: translate(-50%, -50%); /* actually center the element */
+  pointer-events: none; /* optional: allows clicking through the overlay */
+}
+
+h1,
+h2,
+h3,
+p {
+  font-family: 'Inter', sans-serif;
+  color: white;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+h1 {
+  font-size: var(--fluid-h1);
+}
+
 html,
 body,
 #root {
