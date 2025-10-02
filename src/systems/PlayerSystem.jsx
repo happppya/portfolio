@@ -40,11 +40,11 @@ export function Player() {
     }
 
     // ground check
-    if (pos.y <= 50.01) canJump.current = true
+    if (pos.y <= 5) canJump.current = true
   })
 
   return (
-    <RigidBody ref={ref} type="dynamic" colliders="cuboid" mass={1} restitution={0} friction={0} position = {[0,5,0]}>
+    <RigidBody ref={ref} type="dynamic" colliders="cuboid" mass={1} restitution={0} friction={0} position={[0, 5, 0]}>
       <mesh castShadow>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color="blue" />
